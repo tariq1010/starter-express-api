@@ -1,7 +1,9 @@
-const express = require('express')
-const app = express()
-app.all('/', (req, res) => {
-    console.log("Just got a request!")
-    res.send('Yo!')
-})
-app.listen(process.env.PORT || 3000)
+const express = require("express");
+const app = express();
+app.get("/", (req, res) => {
+  console.log("Just got a request!");
+  res.json({ message: "Just got a request!" });
+});
+app.listen(3002, () => {
+  console.log("running");
+});
